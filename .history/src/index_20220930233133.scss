@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+@layer components {
+  .page-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipse;
+    overflow: hidden;
+  }
+  .box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .user-page-height {
+    height: calc(100vh - 100px);
+  }
+
+  .footer-bottom-right .swiper-button-prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 80px;
+    top: auto;
+    left: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: black;
+  }
+  .footer-bottom-right .swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .footer-bottom-right .swiper-button-prev::after {
+    font-size: 20px;
+  }
+  .footer-bottom-right .swiper-button-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 20px;
+    top: auto;
+    left: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: black;
+  }
+  .footer-bottom-right .swiper-button-next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .footer-bottom-right .swiper-button-next::after {
+    font-size: 20px;
+  }
+  .navbar .swiper-slide {
+    width: 150px !important;
+  }
+
+  .banner-left .swiper-button-prev {
+    @apply bg-blue-100 rounded-full w-10 h-10 absolute;
+  }
+  .banner-left .swiper-button-prev::after {
+    font-size: 20px;
+  }
+  .banner-left .swiper-button-next {
+    @apply bg-blue-100 rounded-full w-10 h-10 absolute;
+  }
+  .banner-left .swiper-button-next::after {
+    font-size: 20px;
+    @apply translate-x-[2px];
+  }
+}
